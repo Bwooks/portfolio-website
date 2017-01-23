@@ -1,13 +1,19 @@
 import React from "react";
-
+import Header from "./Header";
+import {Footer} from "./Footer";
+import Main from "./Main";
+import About from "./About";
 // Home page component
 export default class Home extends React.Component {
-  // render
+
   render() {
-    return (
+      return (
       <div className="page-home">
-        <h4>Hello world!</h4>
+        <Header />
+          <Main {...this.props}/>
+          <Footer />
       </div>
     );
   }
 }
+
