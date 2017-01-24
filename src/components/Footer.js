@@ -4,6 +4,10 @@
 import React from "react";
 export const Footer = (props)=>{
     return (
-        <div className="footer"></div>
+        <section className="footer">
+            <div className="container">
+                <h2>Contact me</h2>
+            </div>
+        </section>
     );
 }

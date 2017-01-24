@@ -31,7 +31,14 @@ module.exports = {
       {
         test: /\.css$/,
         loaders: ['style', 'css'],
+      },
+
+      {
+          test: /\.(jpg|png|svg)$/,
+          loader: 'file',
+          include: './public/assets/'
       }
+
     ],
   },
   devServer: {

@@ -12,7 +12,7 @@ export default class App extends React.Component {
   // render
   render() {
     return (
-      <div className="container">
+      <div className="app_container">
         <div className="nav_bar">
           <div className="nav_title">Title</div>
           <div className="nav_links">
