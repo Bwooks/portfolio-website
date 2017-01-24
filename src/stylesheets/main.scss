@@ -92,9 +92,19 @@
     background-color:#18BC9C
   }
 
-  single{
-    margin-bottom:5%;
+  .single{
+    margin:0;
+    display:inline-block;
 
+  }
+  .single img{
+    border:5px solid white;
+  }
+
+  .projects_title{
+    text-align:center;
+    font-weight:bold;
+    margin:5%;
   }
 
 
