@@ -13,7 +13,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="app_container">
-        <div className="nav_bar">
+        <nav className="nav">
+        <div className="nav_container">
           <div className="nav_title">Title</div>
           <div className="nav_links">
             <span>One</span>
@@ -21,6 +22,7 @@ export default class App extends React.Component {
             <span>Three</span>
           </div>
         </div>
+        </nav>
           <Home {...this.state}/>
       </div>
     );
