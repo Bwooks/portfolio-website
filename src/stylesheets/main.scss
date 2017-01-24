@@ -92,9 +92,29 @@
     background-color:#18BC9C
   }
 
-  single{
-    margin-bottom:5%;
-
+  .single{
+    margin:0;
+  }
+  .single_wrapper{
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+    background-color:#2C3E50;
+    border-bottom:1px solid white;
+  }
+  .single_wrapper img{
+    display:inline-block;
+  }
+  .single_wrapper p{
+    width:50%;
+    display:inline-block;
+    position:relative;
+    top:50px;
+    text-align:left;
+    color:white;
+  }
+  .projects_title{
+    margin:5%;
   }
 
 
