@@ -24,6 +24,6 @@ export default class Single extends Component{
                 </div>
             </div>
         );
-        return(this.props.index % 2 === 0 ? imgFirst : imgSecond);
+        return(this.props.index % 2 !== 0 ? imgFirst : imgSecond);
     }
 }
