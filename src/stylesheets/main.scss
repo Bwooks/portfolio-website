@@ -32,22 +32,6 @@
 .group-wrapper{
   display:block;
 }
-.projects_title{
-  text-align:center;
-  font-weight:bold;
-  margin:15%;
-}
-.projects{
-  display:flex;
-  justify-content:center;
-  margin-top:5%;
-  text-align:center;
-}
-
-.single{
-  margin-bottom:5%;
-}
-
 .about{
   background-color:#18BC9C;
   margin-bottom:5%;
@@ -95,16 +79,19 @@
   .single{
     margin:0;
     display:inline-block;
-
-  }
-  .single img{
-    border:5px solid white;
+    width:33%;
   }
 
-  .projects_title{
-    text-align:center;
-    font-weight:bold;
-    margin:5%;
+  .projects{
+    width:100vw;
+    margin:0;
+    padding:0;
+  }
+
+  .projects .container{
+    width:100%;
+    margin:0;
+    padding:0;
   }
 
 
