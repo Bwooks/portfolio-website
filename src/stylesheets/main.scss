@@ -122,7 +122,7 @@
   .overlay_description{
     padding:2% 15% 2% 20%;
   }
-  .overlay_info button{
+  .overlay_info a{
     display:inline-block;
     color:white;
     background-color:purple;
@@ -130,14 +130,17 @@
     margin:1%;
     width:25%;
     height:40px;
+    text-align:center;
+    line-height:40px;
+    text-decoration:none;
   }
-  .overlay_info button:hover{
+  .overlay_info a:hover{
     transition:all 0.2s;
 
     background-color:white;
     color:slategrey;
   }
-  .overlay_buttons{
+  .overlay_links{
     width:100%;
     display:flex;
     justify-content:center;

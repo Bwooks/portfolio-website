@@ -19,7 +19,7 @@ export default class Main extends Component{
     render(){
         return (
             <div className="main_container">
-                <Projects show={this.props.show}/>
+                <Projects show={this.props.show} projects={this.props.projects}/>
             </div>
         )
     }

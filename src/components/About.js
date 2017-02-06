@@ -5,7 +5,7 @@ import React from "react";
 const About = (props) =>{
     return (
         <section className="about">
-
+        <a id="about"></a>
             <div className="container">
             <h1>About me</h1>
             <p className="about_p1">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.

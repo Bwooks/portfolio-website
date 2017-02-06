@@ -4,17 +4,20 @@
 import React,{Component} from "react";
 export default class Single extends Component{
     render(){
-        const src = require(`file-loader!../../public/assets/${this.props.project}.png`);
+        const live = this.props.project.live;
+        const github = this.props.project.github;
+        const src = require(`file-loader!../../public/assets/${this.props.project.name}.png`);
         return(
             <div className="single">
+            <a id="projects"></a>
                 <img className="single_img" src={src}/>
                 <div className="single_overlay">
                     <div className="overlay_info">
-                        <h2>Title</h2>
-                        <p className="overlay_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-                        <div className="overlay_buttons">
-                            <button className="overlay_demo">Live Demo</button>
-                            <button className="overlay_github">Github</button>
+                        <h2>{this.props.project.name}</h2>
+                        <p className="overlay_description">{this.props.project.description}</p>
+                        <div className="overlay_links">
+                            <a className="overlay_demo" href={live} target="_blank">Live Demo</a>
+                            <a className="overlay_github" href={github} target="_blank">Github</a>
                         </div>
                     </div>
                 </div>

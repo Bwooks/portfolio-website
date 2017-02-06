@@ -15,11 +15,11 @@ export default class App extends React.Component {
       <div className="app_container">
         <nav className="nav">
         <div className="nav_container">
-          <div className="nav_title">Title</div>
+          <div className="nav_title">Web Application Developer</div>
           <div className="nav_links">
-            <span>One</span>
-            <span>Two</span>
-            <span>Three</span>
+            <span><a href="#projects">Projects</a></span>
+            <span><a href="#about">About Me</a></span>
+            <span><a href="#footer">Contact</a></span>
           </div>
         </div>
         </nav>
