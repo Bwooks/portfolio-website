@@ -3,33 +3,45 @@
     {
       "name":"TalaPrep",
       "sentence":"Letraset sheets containing Lorem Ipsum passages, Letraset sheets containing Lorem Ipsum passages, and more.",
-      "description":"Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      "description":"Find a tutor near you and check out their video profile to learn more about their teaching style, personality and experience. Feel free to get in touch and set up a time and place for your lesson!",
       "github":"",
       "live":"https://www.talaprep.com",
       "technologies":{
-        "languages":["Javascript","PHP","HTML5","CSS3","MySQL"],
+        "stack":["Javascript","PHP","HTML5","CSS3","MySQL"],
         "tools":["Wordpress"]
       },
       "date":"December 2016"
     },
     {
-      "name":"tally",
-      "sentence":"Letraset sheets containing Lorem Ipsum passages, Letraset sheets containing Lorem Ipsum passages, and more.",
-      "description":"Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      "github":"https://www.github.com/Bwooks/voting-app",
-      "live":"localhost:8080/tally",
+      "name":"Dashboard",
+      "sentence":"Keep track of the employees currently at your organization. As things change, you can add, edit or delete employee data.",
+      "description":"Keep track of the employees currently in your organization. As things change, you can add, edit or delete employee data.",
+      "github":"https://www.github.com/Bwooks/user-list-app",
+      "live":"https://userdash.herokuapp.com",
       "technologies":{
-        "stack":["Node","React","Redux","React Router","Immutable","Mocha","Chai","HTML5","CSS3"],
+        "stack":["React","Redux","React Router","Express","HTML5","CSS3"],
         "tools":["Git","Webpack"]
       },
-      "date":"January 2017"
+      "date":"February 2017"
     },
     {
-      "name":"Parlay",
+      "name":"TicTacToe+",
       "sentence":"Letraset sheets containing Lorem Ipsum passages, Letraset sheets containing Lorem Ipsum passages, and more.",
-      "description":"Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      "description":"Play head to head against the best tic tac toe opponent there is. You can't win, but you can try!",
+      "github":"http://codepen.io/_brooksd/pen/KgzykZ",
+      "live":"http://codepen.io/_brooksd/full/KgzykZ/",
+      "technologies":{
+        "stack":["Javascript","jQuery","HTML5","CSS3"],
+        "tools":[]
+      },
+      "date":"September 2016"
+    },
+    {
+      "name":"React Chattr",
+      "sentence":"Letraset sheets containing Lorem Ipsum passages, Letraset sheets containing Lorem Ipsum passages, and more.",
+      "description":"Chat with friends, family or strangers online without the hassles of registration. Pick a name and an avatar and you're all set.",
       "github":"https://www.github.com/Bwooks/chat-prototype",
-      "live":"localhost:8080/parlay",
+      "live":"https://react-chattr.herokuapp.com",
       "technologies":{
         "stack":["React","Redux","React Router","Express","HTML5","CSS3"],
         "tools":["Git","Webpack"]
@@ -39,14 +51,26 @@
     {
       "name":"Pomodoro",
       "sentence":"Letraset sheets containing Lorem Ipsum passages, Letraset sheets containing Lorem Ipsum passages, and more.",
-      "description":"Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      "github":"https://www.github.com/Bwooks/chat-prototype",
-      "live":"localhost:8080/pomodoro",
+      "description":"Measure and manage your productivity by knowing exactly when you're working and when you're not. To get started, assign your break and work durations.",
+      "github":"http://codepen.io/_brooksd/pen/BQvaWx",
+      "live":"http://codepen.io/_brooksd/full/BQvaWx/",
       "technologies":{
         "stack":["Javascript","jQuery","HTML5","CSS3"],
         "tools":[]
       },
       "date":"September 2016"
+    },
+    {
+      "name":"Vote Redux",
+      "sentence":"Letraset sheets containing Lorem Ipsum passages, Letraset sheets containing Lorem Ipsum passages, and more.",
+      "description":"Find out what to watch by voting on the most popular movies currently in theatres in a tournament-style fashion.",
+      "github":"https://www.github.com/Bwooks/voting-app",
+      "live":"localhost:8080/tally",
+      "technologies":{
+        "stack":["Node","React","Redux","React Router","Immutable","Mocha","Chai","HTML5","CSS3"],
+        "tools":["Git","Webpack"]
+      },
+      "date":"January 2017"
     }
   ],
   "skills":{
@@ -54,6 +78,15 @@
     "backend":["Node","Express","PHP","MySQL"],
     "technologies":["HTML5","CSS3"]
   },
+  "contact":{
+    "link":{
+      "github":"https:github.com/bwooks",
+      "codepen":"https://codepen.io/_brooksd/pens/public/",
+      "linkedin":"https://www.linkedin.com/in/brooks-dulla-36954243/",
+      "gmail":"brooksdulla@gmail.com"
+    },
+    "icon":"../public/assets"
+  },
   "resume":"localhost:8080/resume",
-  "show":["TalaPrep","Pomodoro","tally","Parlay"]
+  "show":["TalaPrep","Pomodoro","tally","Parlay","TicTacToe","UserList"]
 }

@@ -12,7 +12,7 @@ export default class Home extends React.Component {
         <Header />
           <Main {...this.props}/>
           <About />
-          <Footer />
+          <Footer {...this.props}/>
       </div>
     );
   }

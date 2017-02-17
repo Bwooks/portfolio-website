@@ -6,15 +6,6 @@ import {Projects} from "./Projects";
 export default class Main extends Component{
     constructor(props) {
         super(props);
-
-    }
-
-    next(){
-
-    }
-
-    prev(){
-
     }
     render(){
         return (

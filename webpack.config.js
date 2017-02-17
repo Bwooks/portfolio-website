@@ -35,7 +35,7 @@ module.exports = {
 
       {
           test: /\.(jpg|png|svg)$/,
-          loader: 'file',
+          loader: 'file-loader',
           include: './public/assets/'
       }
 

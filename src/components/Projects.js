@@ -4,7 +4,6 @@
 import React from "react";
 import Single from "./Single";
 export const Projects = (props)=>{
-console.log('hooo',props);
 return (
     <section className="projects">
         <div className="container">

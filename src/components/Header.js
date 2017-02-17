@@ -9,7 +9,7 @@ const Header  = (props)=>{
             <section className="header">
             <div className="container">
                 <div className="group-wrapper">
-                <img className="main_img" src="https://blackrockdigital.github.io/startbootstrap-freelancer/img/profile.png" width="185px" height="185px"/>
+                <div className="img_wrapper" style={{"width":"200px"}}><img className="main_img" src="https://blackrockdigital.github.io/startbootstrap-freelancer/img/profile.png" width="185px" height="185px"/></div>
                 <div className="main_title"><h1>Brooks Dulla</h1></div>
                 </div>
             </div>
