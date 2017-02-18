@@ -5,19 +5,20 @@ import React from "react";
 const About = (props) =>{
     return (
         <section className="about">
-            <a id="about"></a>
             <div className="container">
-            <h1>What I Do</h1>
+                <a id="about"></a>
+
+                <h1>What I Do</h1>
                 <div className="about_description">
+
             <p className="about_p1">
                 I'm a Software Developer excited about creating software that makes the difficult and impossible things of the past, intuitive, easy and accessible to its users.
             </p>
-                </div>
-                <div className="about_skills">
+                    <div className="about_skills">
                     <ul className="skills_core">
                         <li className="skills_title"><h3>Core <br/>Skillset</h3></li>
                         <li>Javascript</li>
-                        <li>HTML</li>
+                        <li>HTML5</li>
                         <li>CSS3</li>
                         <li>jQuery</li>
                     </ul>
@@ -33,9 +34,12 @@ const About = (props) =>{
                         <li>Git</li>
                         <li>Webpack</li>
                         <li>Photoshop</li>
+                        <li>Webstorm/Sublime</li>
                     </ul>
                 </div>
             </div>
+            </div>
+
         </section>
     )
 }

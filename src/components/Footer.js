@@ -14,8 +14,8 @@ export const Footer = (props)=>{
         <section className="footer">
         <a id="footer"></a>
             <div className="container">
-                <h3>Contact me at <span>brooksdulla@gmail.com</span></h3>
                 <div className="contact_info">
+                    <h3>Contact me at <span>brooksdulla@gmail.com</span></h3>
                     <ul>
                         <li>
                             <a href={`mailto:${gmail}`}><img src={gmailIcon} /></a>
