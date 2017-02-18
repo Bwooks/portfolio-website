@@ -17,8 +17,8 @@ body{
   height:80px;
 }
 
-.nav_container div{
-  width:50%;
+.nav_mobile{
+  display:none;
 }
 
 .nav_title{
@@ -26,10 +26,12 @@ body{
   padding-left:5%;
   font-size:1.5em;
   line-height:100%;
+  width:50%;
 }
 .nav_links{
   text-align:right;
   padding-right:5%;
+  width:50%;
 }
 .nav_links span{
   font-size:1.3em;
@@ -42,9 +44,6 @@ body{
 .nav_links span a:hover, .nav_links span a:focus, .nav_links span a:active{
   color:#3273ad;
   text-decoration:none;
-}
-.nav_mobile{
-  display:none;
 }
 .header .container{
   height:70vh;
@@ -279,80 +278,59 @@ body{
 }
 /* Change navigation menu*/
 @media only screen and (max-width:767px){
+  .nav_container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
   .nav_links{
     display:none;
   }
-  .nav_mobile{
-    display:flex;
-    justify-content:center;
-    width:50%;
-    height:6vh;
-    position:relative;
-  }
-  .nav_mobile_container{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    position:absolute;
-    right:0px;
+  .nav_title{
+    display:inline-block;
+    text-align:left;
+    width:80%;
+    padding:0px;
+
   }
   .mobile_menu{
-    color:white;
-    font-size:4.5vh;
-    transform:scale(1.5,1);
-    cursor:pointer;
+    display:inline-block;
+    width:5%;
+    font-size:2.4em;
+    transform:scale(1.8,1);
+  }
+  .nav_mobile{
+    display:block;
+    width:100%;
     text-align:center;
-    position:relative;
-    margin-bottom:5px;
+    border-top:1px solid white;
+    background-color:#2C3E50;
   }
   .mobile_links{
-    display:none;
+    display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    /*bottom:250px;*/
-    /*opacity:0;*/
   }
-
   .mobile_links span{
-    display:block;
-    background-color:#2C3E50;
-    text-align:center;
-    width:180px;
-    height:50px;
-    padding:15%;
+    height:40px;
+    width:100%;
+    cursor:pointer;
+    line-height:40px;
   }
-  .mobile_links span:hover, .mobile_links span:active, .mobile_links span:focus{
-    background:rgba(163, 163, 163,1);
-    transition:all 0.2s;
+  .mobile_links span:hover{
+    background-color:#a9a5a4;
   }
   .mobile_links span a{
     color:white;
-    text-decoration:none;
+    font-size:1.1em;
+    text-transform:uppercase;
+    font-weight:bold;
+    text-decoration: none;
   }
-
 
 }
-/* Change nav menu */
 
-@media only screen and (max-width:550px){
-  .nav_mobile{
-    width:30% !important;
-    margin:0;
-    padding:0;
-  }
-  .mobile_menu{
-    margin-top:5px;
-    margin-bottom:9px;
-    font-size:4vh;
-  }
-  .nav_title{
-    width:60% !important;
-    padding-left:0;
-    margin-left:0;
-  }
-}
 /* Nexus 5x/6p iPhone 6+ */
 @media only screen and (max-width:480px){
   .single{
@@ -375,22 +353,12 @@ body{
     width:35%;
     height:35%;
   }
+
   .mobile_menu{
-    font-size:3.5vh;
-    margin-top:5px;
-    margin-bottom:16px;
-  }
-  .mobile_links{
-    text-align:center;
+    font-size:2.2em;
   }
   .nav_title{
-    font-size:1em;
-  }
-  .nav_mobile{
-    right:28px;
-  }
-  .nav_mobile span{
-    width:160px;
+    font-size:1.1em;
   }
 
 }
@@ -412,18 +380,14 @@ body{
   .about li h3{
     font-size:3.2vw;
   }
-  .mobile_links{
-    text-align:center;
+
+  .mobile_menu{
+    font-size:2em;
   }
   .nav_title{
-    font-size:0.9em;
+    font-size:1em;
   }
-  .nav_mobile{
-    right:23px;
-  }
-  .nav_mobile span{
-    width:140px;
-  }
+
 }
 @media only screen and (max-width:360px){
   .contact_info img{
@@ -447,20 +411,8 @@ body{
   .about li{
     font-size:3.3vw;
   }
-
   .about li h3{
     font-size:3.5vw;
   }
-  .nav_title{
-    font-size:0.8em;
-  }
 
-  .nav_mobile{
-    right:20px;
-  }
-  .mobile_links{
-  }
-  .nav_mobile span{
-    width:120px;
-  }
 }

@@ -76,17 +76,17 @@ export default class App extends React.Component {
             <span><a href="#about">About Me</a></span>
             <span><a href="#footer">Contact</a></span>
           </div>
+            <div className="mobile_menu" onClick={this.showMenu.bind(this)}>&#x2261;</div>
+        </div>
             <div className="nav_mobile">
                 <div className="nav_mobile_container">
-            <div className="mobile_menu" onClick={this.showMenu.bind(this)}>&#x2261;</div>
-                <div className="mobile_links">
-                    <span><a href="#projects">Projects</a></span>
-                    <span><a href="#about">About Me</a></span>
-                    <span><a href="#footer">Contact</a></span>
-                </div>
+                    <div className="mobile_links">
+                        <span><a href="#projects">Projects</a></span>
+                        <span><a href="#about">About Me</a></span>
+                        <span><a href="#footer">Contact</a></span>
+                    </div>
                 </div>
             </div>
-        </div>
         </nav>
           <Home {...this.state}/>
       </div>
