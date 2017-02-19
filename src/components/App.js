@@ -9,61 +9,53 @@ export default class App extends React.Component {
     super(props);
     this.state = portfolio;
   }
-/*
+
   effects(type,elem){
+      let links = elem.childNodes;
       if(type === "dropdown"){
-          elem.style.bottom = "250px";
-          let bottom = 250;
-          let opacity = 0;
+          let childIndex = 0;
+          let height = 0;
+          elem.style.display = "block";
           function dropdown(){
-              if(bottom > 0){
-                  bottom-=2;
-                  elem.style.bottom = bottom + "px";
-                  requestAnimationFrame(dropdown);
-              }
-              if(opacity < 1){
-                  opacity+=0.25;
-                  elem.style.opacity = opacity+"";
+              if(height < 120){
+                  height+=4;
+                  elem.style.height = height + "px";
+                  if(height % 40 === 0 && height > 0){
+                      links[childIndex].style.display = "block";
+                      childIndex++;
+                  }
                   requestAnimationFrame(dropdown);
               }
           }
           dropdown();
-
-      }else if(type === "slideout"){
-          let top = 0;
-          let opacity = 1;
-          elem.style.position = "absolute";
-          function slideout(){
-              if(top < 250){
-                  top+=0.25;
-                  elem.style.bottom = top + "px";
-                  requestAnimationFrame(slideout);
-              }
-              if(opacity > 0){
-                  opacity-=0.01;
-                  elem.style.opacity = opacity+"";
-                  requestAnimationFrame(slideout);
-              }
-              if(top === 250){
-                  elem.style.display = "none";
+      }else if(type === "slideup"){
+          let childIndex = links.length - 1;
+          let height = 120;
+          function slideup(){
+              if(height > 0){
+                  if(height % 40 === 0 && height<=120) {
+                      links[childIndex].style.display = "none";
+                      childIndex--;
+                  }
+                  height-=4;
+                  elem.style.height = height + "px";
+                  if(height === 0){
+                      elem.style.display = "none";
+                  }
+                  requestAnimationFrame(slideup);
               }
           }
-          slideout();
+          slideup();
       }
   }
-  */
-
   showMenu(event){
-      const mobile_links = event.target.parentElement.childNodes[1];
-      if(mobile_links.style.display === "none" || !mobile_links.style.display){
-          mobile_links.style.display = "flex";
-          //this.effects("dropdown",mobile_links);
+      const mobile_links = this.refs.nav_mobile;
+      if(mobile_links.clientHeight === 0){
+          this.effects("dropdown",mobile_links);
       }else{
-          //this.effects("slideout",mobile_links);
-          mobile_links.style.display = "none";
+          this.effects("slideup",mobile_links);
       }
   }
-
   // render
   render() {
     return (
@@ -78,15 +70,11 @@ export default class App extends React.Component {
           </div>
             <div className="mobile_menu" onClick={this.showMenu.bind(this)}>&#x2261;</div>
         </div>
-            <div className="nav_mobile">
-                <div className="nav_mobile_container">
-                    <div className="mobile_links">
+            <div className="nav_mobile" ref="nav_mobile">
                         <span><a href="#projects">Projects</a></span>
                         <span><a href="#about">About Me</a></span>
                         <span><a href="#footer">Contact</a></span>
                     </div>
-                </div>
-            </div>
         </nav>
           <Home {...this.state}/>
       </div>

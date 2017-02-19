@@ -300,28 +300,25 @@ body{
     transform:scale(1.8,1);
   }
   .nav_mobile{
-    display:block;
+    display:none;
+    height:0px;
     width:100%;
     text-align:center;
     border-top:1px solid white;
     background-color:#2C3E50;
   }
-  .mobile_links{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-  }
-  .mobile_links span{
+  .nav_mobile span{
+    display:none;
     height:40px;
     width:100%;
     cursor:pointer;
     line-height:40px;
   }
-  .mobile_links span:hover{
+  .nav_mobile span:hover{
     background-color:#a9a5a4;
   }
-  .mobile_links span a{
+
+  .nav_mobile span a{
     color:white;
     font-size:1.1em;
     text-transform:uppercase;
