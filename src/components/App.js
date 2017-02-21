@@ -56,6 +56,78 @@ export default class App extends React.Component {
           this.effects("slideup",mobile_links);
       }
   }
+
+  smoothScroll(event){
+      var smooth_scroll_to = function(element, target, duration) {
+          target = Math.round(target);
+          duration = Math.round(duration);
+          if (duration < 0) {
+              return Promise.reject("bad duration");
+          }
+          if (duration === 0) {
+              element.scrollTop = target;
+              return Promise.resolve();
+          }
+
+          var start_time = Date.now();
+          var end_time = start_time + duration;
+
+          var start_top = element.scrollTop;
+          var distance = target - start_top;
+
+          // based on http://en.wikipedia.org/wiki/Smoothstep
+          var smooth_step = function(start, end, point) {
+              if(point <= start) { return 0; }
+              if(point >= end) { return 1; }
+              var x = (point - start) / (end - start); // interpolation
+              return x*x*(3 - 2*x);
+          }
+
+          return new Promise(function(resolve, reject) {
+              // This is to keep track of where the element's scrollTop is
+              // supposed to be, based on what we're doing
+              var previous_top = element.scrollTop;
+
+              // This is like a think function from a game loop
+              var scroll_frame = function() {
+                  if(element.scrollTop != previous_top) {
+                      reject("interrupted");
+                      return;
+                  }
+
+                  // set the scrollTop for this frame
+                  var now = Date.now();
+                  var point = smooth_step(start_time, end_time, now);
+                  var frameTop = Math.round(start_top + (distance * point));
+                  element.scrollTop = frameTop;
+
+                  // check if we're done!
+                  if(now >= end_time) {
+                      resolve();
+                      return;
+                  }
+
+                  // If we were supposed to scroll but didn't, then we
+                  // probably hit the limit, so consider it done; not
+                  // interrupted.
+                  if(element.scrollTop === previous_top
+                      && element.scrollTop !== frameTop) {
+                      resolve();
+                      return;
+                  }
+                  previous_top = element.scrollTop;
+
+                  // schedule next frame for execution
+                  setTimeout(scroll_frame, 0);
+              }
+
+              // boostrap the animation process
+              setTimeout(scroll_frame, 0);
+          });
+      };
+      let links = document.body.childNodes[1].childNodes[0].childNodes[1].childNodes
+      smooth_scroll_to(document.body,600,500);
+  }
   // render
   render() {
     return (
@@ -64,16 +136,16 @@ export default class App extends React.Component {
         <div className="nav_container">
           <div className="nav_title">Web Application Developer</div>
           <div className="nav_links">
-            <span><a href="#projects">Projects</a></span>
-            <span><a href="#about">About Me</a></span>
-            <span><a href="#footer">Contact</a></span>
+            <span><a className = "projects_link" onClick={this.smoothScroll.bind(this)}>Projects</a></span>
+            <span><a className= "about_link" onClick={this.smoothScroll.bind(this)}>About Me</a></span>
+            <span><a className= "about_link" onClick={this.smoothScroll.bind(this)}>Contact</a></span>
           </div>
             <div className="mobile_menu" onClick={this.showMenu.bind(this)}>&#x2261;</div>
         </div>
             <div className="nav_mobile" ref="nav_mobile">
-                        <span><a href="#projects">Projects</a></span>
-                        <span><a href="#about">About Me</a></span>
-                        <span><a href="#footer">Contact</a></span>
+                        <span onClick={this.smoothScroll.bind(this)}><a href="#projects">Projects</a></span>
+                        <span onClick={this.smoothScroll.bind(this)}><a href="#about">About Me</a></span>
+                        <span onClick={this.smoothScroll.bind(this)}><a href="#footer">Contact</a></span>
                     </div>
         </nav>
           <Home {...this.state}/>
