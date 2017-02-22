@@ -4,13 +4,15 @@
 import React from "react";
 
 const Header  = (props)=>{
-        return(
+    const resume = require("file-loader!../../public/assets/resume.pdf");
+    return(
             <section className="header">
             <div className="container">
-                <div className="group-wrapper">
-                <div className="img_wrapper" style={{"width":"200px"}}><img className="main_img" src="https://blackrockdigital.github.io/startbootstrap-freelancer/img/profile.png" width="185px" height="185px"/></div>
-                <div className="main_title"><h1>Brooks Dulla</h1></div>
+                <div className="main_title" onMouseEnter={props.handleHover} onMouseLeave={props.handleHover}>
+                    <h1>Brooks Dulla &mdash; <br/>Frontend Developer <br/>Based in Toronto</h1>
+                    <span className="reveal">Check out my  <a href={resume} target="_blank">resume</a> for more information!</span>
                 </div>
+                <div className="down_arrow"></div>
             </div>
             </section>
         );

@@ -32,8 +32,8 @@ export default class Home extends React.Component {
         const originalColor = window.getComputedStyle(navBar,null).getPropertyValue("background-color");
         const scrollPos = window.scrollY;
         homeDom.childNodes.forEach((section,index)=>{
-            if(scrollPos+window.innerHeight - section.getBoundingClientRect().height+50>section.offsetTop && scrollPos+window.innerHeight - section.getBoundingClientRect().height
-            <= section.offsetTop + section.getBoundingClientRect().height){
+            if(scrollPos+window.innerHeight - section.getBoundingClientRect().height>section.offsetTop-80 && scrollPos+window.innerHeight - section.getBoundingClientRect().height
+            <= section.offsetTop-80 + section.getBoundingClientRect().height){
                 if(index>0){
                     navLinks[index-1].style.backgroundColor = "#18BC9C";
                     if(navLinks[1].style.backgroundColor === navLinks[2].style.backgroundColor && navLinks[1].style.backgroundColor === "rgb(24, 188, 156)"){
@@ -42,8 +42,8 @@ export default class Home extends React.Component {
                         navLinks[1].style.backgroundColor = originalColor;
                     }
                 }
-            }else if(scrollPos+window.innerHeight - section.getBoundingClientRect().height<=section.offsetTop || scrollPos+window.innerHeight - section.getBoundingClientRect().height
-                > section.offsetTop + section.getBoundingClientRect().height){
+            }else if(scrollPos+window.innerHeight - section.getBoundingClientRect().height<=section.offsetTop-80 || scrollPos+window.innerHeight - section.getBoundingClientRect().height
+                > section.offsetTop-80 + section.getBoundingClientRect().height){
                 if(index>0){
                     navLinks[index-1].style.backgroundColor = originalColor;
                 }
@@ -52,10 +52,41 @@ export default class Home extends React.Component {
         });
     }
 
+    handleHover(event){
+        let main_title = event.target;
+        let caption = main_title.childNodes[1];
+        console.log(caption,main_title)
+        if(event.type === "mouseenter"){
+            let opacity = 0;
+            function reveal(){
+                if(opacity<1 && caption !== undefined){
+                    opacity+=0.1;
+                    caption.style.opacity = opacity;
+                    requestAnimationFrame(reveal);
+                }else{
+                    return;
+                }
+            }
+            reveal();
+        }else if(event.type === "mouseleave"){
+            let opacity = 1;
+            function hide(){
+                if(opacity>0 && caption !== undefined){
+                    opacity-= 0.1;
+                    caption.style.opacity = opacity;
+                    requestAnimationFrame(hide);
+                }else{
+                    return;
+                }
+            }
+            hide();
+        }
+    }
+
   render() {
       return (
       <div className="home_container" ref={thisNode=>this.node = thisNode}>
-        <Header />
+        <Header handleHover={this.handleHover.bind(this)}/>
           <Main {...this.props}/>
           <About />
           <Footer {...this.props}/>

@@ -125,9 +125,19 @@ export default class App extends React.Component {
               setTimeout(scroll_frame, 0);
           });
       };
-      let links = document.body.childNodes[1].childNodes[0].childNodes[1].childNodes
-      smooth_scroll_to(document.body,600,500);
+      let links = document.body.childNodes[1].childNodes[0].childNodes[1].childNodes;
+      let projectsOffset = links[1].offsetTop-80; //80px is height of the fixed nav bar
+      let aboutOffset = links[2].offsetTop+80;
+      let footerOffset = links[3].offsetTop+80;
+      if(event.target.className === "projects_link"){
+          smooth_scroll_to(document.body,Math.min(projectsOffset),500);
+      }else if(event.target.className === "about_link"){
+          smooth_scroll_to(document.body,Math.min(aboutOffset),500);
+      }else if(event.target.className === "footer_link"){
+          smooth_scroll_to(document.body,Math.min(footerOffset),500);
+      }
   }
+
   // render
   render() {
     return (
@@ -138,14 +148,14 @@ export default class App extends React.Component {
           <div className="nav_links">
             <span><a className = "projects_link" onClick={this.smoothScroll.bind(this)}>Projects</a></span>
             <span><a className= "about_link" onClick={this.smoothScroll.bind(this)}>About Me</a></span>
-            <span><a className= "about_link" onClick={this.smoothScroll.bind(this)}>Contact</a></span>
+            <span><a className= "footer_link" onClick={this.smoothScroll.bind(this)}>Contact</a></span>
           </div>
             <div className="mobile_menu" onClick={this.showMenu.bind(this)}>&#x2261;</div>
         </div>
             <div className="nav_mobile" ref="nav_mobile">
-                        <span onClick={this.smoothScroll.bind(this)}><a href="#projects">Projects</a></span>
-                        <span onClick={this.smoothScroll.bind(this)}><a href="#about">About Me</a></span>
-                        <span onClick={this.smoothScroll.bind(this)}><a href="#footer">Contact</a></span>
+                <span><a className = "projects_link" onClick={this.smoothScroll.bind(this)}>Projects</a></span>
+                <span><a className= "about_link" onClick={this.smoothScroll.bind(this)}>About Me</a></span>
+                <span><a className= "footer_link" onClick={this.smoothScroll.bind(this)}>Contact</a></span>
                     </div>
         </nav>
           <Home {...this.state}/>
