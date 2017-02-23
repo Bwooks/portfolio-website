@@ -9,7 +9,9 @@
     "url": "https://github.com/Bwooks/personal-portfolio"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline --hot --history-api-fallback --host localhost --port 8080",
+    "start":"node server.js",
+    "postinstall":"npm run build-prod",
+    "dev-server": "webpack-dev-server --inline --hot --history-api-fallback --host localhost --port 8080",
     "build-dev": "webpack --config webpack.dev.config.js",
     "build-prod": "webpack -p --config webpack.prod.config.js",
     "test": "mocha --recursive --compilers js:babel-register --require babel-polyfill --require ignore-styles",
@@ -33,7 +35,8 @@
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
     "redux-form": "^6.4.3",
-    "redux-saga": "^0.14.3"
+    "redux-saga": "^0.14.3",
+    "express": "latest"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",

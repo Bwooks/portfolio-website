@@ -12,20 +12,22 @@ const About = (props) =>{
                 <div className="about_description">
 
             <p className="about_p1">
-                I'm a Software Developer excited about creating software that makes the difficult and impossible things of the past, intuitive, easy and accessible to its users.
+                I'm a Web Developer with a background in Computer Science passionate about developing web applications that tackle real-world problems and help users achieve their goals.
+                Feel free to get in touch if you'd like to learn more or have a project in mind.
             </p>
+
                     <div className="about_skills">
                     <ul className="skills_core">
                         <li className="skills_title"><h3>Core <br/>Skillset</h3></li>
                         <li>Javascript</li>
+                        <li>jQuery</li>
                         <li>HTML5</li>
                         <li>CSS3</li>
-                        <li>jQuery</li>
                     </ul>
                     <ul className="skills_working">
                         <li className="skills_title"><h3>Working<br/> Knowledge</h3></li>
                         <li>PHP</li>
-                        <li>React</li>
+                        <li>React.js</li>
                         <li>Redux</li>
                         <li>Node.js</li>
                     </ul>
@@ -34,9 +36,10 @@ const About = (props) =>{
                         <li>Git</li>
                         <li>Webpack</li>
                         <li>Photoshop</li>
-                        <li>Webstorm/Sublime</li>
+                        <li>Sublime/Web Storm</li>
                     </ul>
                 </div>
+                    <div className="site_description">*Technologies used to develop this site: React.js, Node.js, HTML5, CSS3, Webpack, Photoshop and Git</div>
             </div>
             </div>
 

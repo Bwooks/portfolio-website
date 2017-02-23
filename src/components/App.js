@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/main.scss";
+import "../stylesheets/main.css";
 import portfolio from "json-loader!../portfolio.json";
 import Home from "./Home";
 // app component
@@ -17,7 +17,7 @@ export default class App extends React.Component {
           let height = 0;
           elem.style.display = "block";
           function dropdown(){
-              if(height < 120){
+              if(height < 160){
                   height+=4;
                   elem.style.height = height + "px";
                   if(height % 40 === 0 && height > 0){
@@ -30,10 +30,10 @@ export default class App extends React.Component {
           dropdown();
       }else if(type === "slideup"){
           let childIndex = links.length - 1;
-          let height = 120;
+          let height = 160;
           function slideup(){
               if(height > 0){
-                  if(height % 40 === 0 && height<=120) {
+                  if(height % 40 === 0 && height<=160) {
                       links[childIndex].style.display = "none";
                       childIndex--;
                   }
@@ -126,20 +126,23 @@ export default class App extends React.Component {
           });
       };
       let links = document.body.childNodes[1].childNodes[0].childNodes[1].childNodes;
-      let projectsOffset = links[1].offsetTop-80; //80px is height of the fixed nav bar
-      let aboutOffset = links[2].offsetTop+80;
-      let footerOffset = links[3].offsetTop+80;
+      let projectsOffset = links[1].offsetTop; //80px is height of the fixed nav bar
+      let aboutOffset = links[2].offsetTop;
+      let footerOffset = links[3].offsetTop;
       if(event.target.className === "projects_link"){
           smooth_scroll_to(document.body,Math.min(projectsOffset),500);
       }else if(event.target.className === "about_link"){
           smooth_scroll_to(document.body,Math.min(aboutOffset),500);
       }else if(event.target.className === "footer_link"){
           smooth_scroll_to(document.body,Math.min(footerOffset),500);
+      }else if(event.target.className="down_arrow"){
+          smooth_scroll_to(document.body,Math.min(projectsOffset),500);
       }
   }
 
   // render
   render() {
+      const resume = require("file-loader?name=[name].[ext]!../../public/assets/BrooksDulla_resume.pdf");
     return (
       <div className="app_container">
         <nav className="nav">
@@ -149,6 +152,8 @@ export default class App extends React.Component {
             <span><a className = "projects_link" onClick={this.smoothScroll.bind(this)}>Projects</a></span>
             <span><a className= "about_link" onClick={this.smoothScroll.bind(this)}>About Me</a></span>
             <span><a className= "footer_link" onClick={this.smoothScroll.bind(this)}>Contact</a></span>
+              <span><a className= "resume_link" href={resume} target="_blank">Resume</a></span>
+
           </div>
             <div className="mobile_menu" onClick={this.showMenu.bind(this)}>&#x2261;</div>
         </div>
@@ -156,9 +161,10 @@ export default class App extends React.Component {
                 <span><a className = "projects_link" onClick={this.smoothScroll.bind(this)}>Projects</a></span>
                 <span><a className= "about_link" onClick={this.smoothScroll.bind(this)}>About Me</a></span>
                 <span><a className= "footer_link" onClick={this.smoothScroll.bind(this)}>Contact</a></span>
-                    </div>
+                <span><a className= "resume_link" href={resume} target="_blank">Resume</a></span>
+            </div>
         </nav>
-          <Home {...this.state}/>
+          <Home {...this.state} smoothScroll = {this.smoothScroll.bind(this)}/>
       </div>
     );
   }

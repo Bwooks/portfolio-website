@@ -4,15 +4,15 @@
 import React from "react";
 
 const Header  = (props)=>{
-    const resume = require("file-loader!../../public/assets/resume.pdf");
+    const resume = require("file-loader?name=[name].[ext]!../../public/assets/BrooksDulla_resume.pdf");
     return(
             <section className="header">
             <div className="container">
                 <div className="main_title" onMouseEnter={props.handleHover} onMouseLeave={props.handleHover}>
                     <h1>Brooks Dulla &mdash; <br/>Frontend Developer <br/>Based in Toronto</h1>
-                    <span className="reveal">Check out my  <a href={resume} target="_blank">resume</a> for more information!</span>
+                    <span className="reveal">Check out my  <a href={resume} target="_blank">resume</a> for more details</span>
                 </div>
-                <div className="down_arrow"></div>
+                <div className="down_arrow" onClick={props.handleScroll}></div>
             </div>
             </section>
         );
