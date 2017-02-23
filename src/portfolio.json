@@ -1,0 +1,55 @@
+{
+  "projects":[
+    {
+      "name":"TalaPrep",
+      "description":"An online marketplace that connects students with tutors and leverages video profiles to showcase teaching style, personality and experience.",
+      "github":"",
+      "live":"https://www.talaprep.com"
+    },
+    {
+      "name":"Dashboard",
+      "description":"A user management system that keeps track of user data and supports adding, editing and removing users.",
+      "github":"https://www.github.com/Bwooks/user-list-app",
+      "live":"https://userdash.herokuapp.com"
+    },
+    {
+      "name":"TicTacToe+",
+      "description":"A Google-inspired TicTacToe game, with a built in AI that utilizes the minimax algorithm.",
+      "github":"http://codepen.io/_brooksd/pen/KgzykZ",
+      "live":"http://codepen.io/_brooksd/full/KgzykZ/"
+    },
+    {
+      "name":"React Chattr",
+      "description":"A chat application that supports the standard features found in common chat applications, enabling user avatars, names and message timestamps.",
+      "github":"https://www.github.com/Bwooks/chat-prototype",
+      "live":"https://react-chattr.herokuapp.com"
+    },
+    {
+      "name":"Pomodoro",
+      "description":"A productivity application that helps users track their break and work periods, with adjustable settings for each timer.",
+      "github":"http://codepen.io/_brooksd/pen/BQvaWx",
+      "live":"http://codepen.io/_brooksd/full/BQvaWx/"
+    },
+    {
+      "name":"Vote Redux",
+      "description":"An application that lets groups of users vote on movies currently in theatres in a tournament-style fashion.",
+      "github":"https://www.github.com/Bwooks/voting-app",
+      "live":"https://reduxvote.herokuapp.com"
+    }
+  ],
+  "skills":{
+    "frontend":["Javascript","jQuery","React"],
+    "backend":["Node","Express","PHP","MySQL"],
+    "technologies":["HTML5","CSS3"]
+  },
+  "contact":{
+    "link":{
+      "github":"https:github.com/bwooks",
+      "codepen":"https://codepen.io/_brooksd/pens/public/",
+      "linkedin":"https://www.linkedin.com/in/brooks-dulla-36954243/",
+      "gmail":"brooksdulla@gmail.com"
+    },
+    "icon":"../public/assets"
+  },
+  "show":["TalaPrep","Pomodoro","Vote Redux","React Chattr","TicTacToe+","Dashboard"]
+}
