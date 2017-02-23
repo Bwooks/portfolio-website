@@ -142,7 +142,7 @@ export default class App extends React.Component {
 
   // render
   render() {
-      const resume = require("file-loader!../../public/assets/resume.pdf");
+      const resume = require("file-loader!../../public/assets/BrooksDulla_resume.pdf");
     return (
       <div className="app_container">
         <nav className="nav">
