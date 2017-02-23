@@ -1,16 +1,16 @@
 {
   "name": "portfolio-website",
   "version": "1.0.0",
-  "description": "Brooks Dulla's personal porftolio.",
+  "description": "Brooks' personal porftolio.",
   "main": "index.js",
-  "homepage": "https://www.dulladev.com",
+  "homepage": "https://brookscodes.herokuapp.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/Bwooks/personal-portfolio"
   },
   "scripts": {
-    "start":"node server.js",
-    "postinstall":"npm run build-prod",
+    "start": "node server.js",
+    "postinstall": "npm run build-prod",
     "dev-server": "webpack-dev-server --inline --hot --history-api-fallback --host localhost --port 8080",
     "build-dev": "webpack --config webpack.dev.config.js",
     "build-prod": "webpack -p --config webpack.prod.config.js",
@@ -26,6 +26,21 @@
   },
   "author": "Brooks Dulla",
   "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-3": "^6.22.0",
+    "babel-runtime": "^6.23.0",
+    "clean-webpack-plugin": "^0.1.15",
+    "css-loader": "^0.26.1",
+    "express": "latest",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "ignore-styles": "^5.0.1",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.5.0",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
@@ -36,7 +51,9 @@
     "redux": "^3.6.0",
     "redux-form": "^6.4.3",
     "redux-saga": "^0.14.3",
-    "express": "latest"
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
