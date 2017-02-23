@@ -4,7 +4,7 @@
 import React from "react";
 
 const Header  = (props)=>{
-    const resume = require("file-loader!../../public/assets/BrooksDulla_resume.pdf");
+    const resume = require("file-loader?name=[name].[ext]!../../public/assets/BrooksDulla_resume.pdf");
     return(
             <section className="header">
             <div className="container">
