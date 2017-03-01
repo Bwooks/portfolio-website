@@ -171,7 +171,7 @@ nav{
   padding:2% 15% 2% 20%;
   text-align:left;
   white-space:pre-line;
-  font-size:14px;
+  font-size:15px;
 }
 .overlay_info a{
   display:inline-block;
@@ -586,10 +586,7 @@ nav{
   .main_title{
     margin-top:25%;
   }
-  .reveal{
-    font-size:13px;
-  }
   .overlay_description{
-    font-size:13px;
+    font-size:14px;
   }
 }
