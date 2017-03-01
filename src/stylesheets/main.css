@@ -411,6 +411,7 @@ nav{
     width:5%;
     font-size:2.4em;
     transform:scale(1.8,1);
+    cursor:pointer;
   }
   .nav_mobile{
     display:none;

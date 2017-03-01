@@ -126,7 +126,6 @@ export default class App extends React.Component {
             });
         };
         let links = document.body.childNodes[1].childNodes[0].childNodes[1].childNodes;
-        console.log(links[3].offsetTop);
         let projectsOffset = links[1].offsetTop; //80px is height of the fixed nav bar
         let aboutOffset = links[2].offsetTop;
         let footerOffset = links[3].offsetTop;
@@ -139,7 +138,6 @@ export default class App extends React.Component {
             smooth_scroll_to(doc,footerOffset,500);
         }
     }
-
     // render
     render() {
         const resume = require("file-loader?name=[name].[ext]!../../public/assets/BrooksDulla_resume.pdf");
