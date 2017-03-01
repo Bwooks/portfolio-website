@@ -8,9 +8,6 @@ export default class Home extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            projects:"",
-            about:"",
-            contact:""
         }
     }
     componentDidMount(){
@@ -31,7 +28,6 @@ export default class Home extends React.Component {
         const navLinks = navBar.childNodes[1].childNodes;
         const originalColor = window.getComputedStyle(navBar,null).getPropertyValue("background-color");
         const scrollPos = window.scrollY;
-        console.log('here')
         for(let index = 0;index<homeDom.childNodes.length;index++){
             let section = homeDom.childNodes[index];
             if(scrollPos >= section.offsetTop-80 && scrollPos < section.offsetTop + section.getBoundingClientRect().height-80){
@@ -55,36 +51,10 @@ export default class Home extends React.Component {
                 }
             }
         }
-        /*
-
-        **Doesn't work in earlier versions of Chrome and firefox due to ForEach statement**
-
-        homeDom.childNodes.forEach((section,index)=>{
-            if(scrollPos >= section.offsetTop-80 && scrollPos < section.offsetTop + section.getBoundingClientRect().height-80){
-                if(index>0){
-                    navLinks[index-1].style.backgroundColor = "#18BC9C";
-                }
-            }else if(scrollPos < section.offsetTop-80 || scrollPos >= section.offsetTop + section.getBoundingClientRect().height-80){
-                if(index>0){
-                    navLinks[index-1].style.backgroundColor = originalColor;
-                }
-            }
-            if(scrollPos+window.innerHeight+80>= document.body.getBoundingClientRect().height){
-                if(index>0){
-                    if(navLinks[0].style.backgroundColor === "rgb(24, 188, 156)"||navLinks[1].style.backgroundColor === "rgb(24, 188, 156)"){
-                        navLinks[0].style.backgroundColor = originalColor;
-                        navLinks[1].style.backgroundColor = originalColor;
-                    }
-                    navLinks[1].style.backgroundColor = originalColor;
-                    navLinks[2].style.backgroundColor = "#18BC9C";
-
-                }
-            }
-        });
-        */
     }
 
     handleHover(event){
+        /*
         let main_title = event.target;
         let caption = main_title.childNodes[1];
         if(caption.style == null){
@@ -111,6 +81,7 @@ export default class Home extends React.Component {
             }
             hide();
         }
+        */
     }
 
   render() {

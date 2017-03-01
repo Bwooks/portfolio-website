@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body{
   min-width:320px;
@@ -12,10 +13,11 @@ body{
 nav{
   position:fixed;
   width:100%;
-  z-index:10000;
-  -webkit-box-shadow: 1px 3px 25px -4px rgba(0,0,0,0.75);
-  -moz-box-shadow: 1px 3px 25px -4px rgba(0,0,0,0.75);
-  box-shadow: 1px 3px 25px -4px rgba(0,0,0,0.75);
+  z-index:1000;
+  -webkit-box-shadow: 0 8px 6px -6px #000;
+  -moz-box-shadow: 0 8px 6px -6px #000;
+  box-shadow: 0 8px 6px -6px rgba(0,0,0,0.8);
+  font-family:Helvetica;
 }
 .nav_container{
   background-color:#30415D;
@@ -69,7 +71,7 @@ nav{
   text-decoration:none;
 }
 .header .container{
-  height:100vh;
+  height:80vh;
   width:100%;
   display:flex;
   align-items:center;
@@ -77,71 +79,44 @@ nav{
   flex-direction:column;
   background-color:#B1463C;
 }
-.reveal{
-  font-size:18px;
-  text-align:left;
-  display:block;
-}
-.main_title, .main_title h1{
+.main_title h1{
   color:#F4DeCb;
-  font-size:5.2vw;
   font-family:Montserrat;
-  padding:0;
-  margin:0;
+  font-size:4.5vw;
+  text-align:center;
 }
+.main_title h1 span{
+  background-color:#F4DeCb;
+  color:#B1463C;
+  display:block;
+  margin-bottom:-10%;
+  text-align:center;
+}
+
 .main_title{
-  margin:2% 0 0 0;
   display:flex;
   justify-content:center;
   align-items:center;
   flex-direction:column;
-  color:#F4DeCb;
-  font-size:100px;
-  font-family:Montserrat;
+  padding:2% 0 0 0;
+  margin:0;
+  /*
   -webkit-box-shadow: 1px 3px 25px -4px rgba(0,0,0,0);
   -moz-box-shadow: 1px 3px 25px -4px rgba(0,0,0,0);
   box-shadow: 1px 3px 25px -4px rgba(0,0,0,0);
   padding:5%;
   transition:all 0.7s;
+  */
 }
-.reveal{
-  opacity:0;
-  margin-top:5%;
-  margin-left:1%;
-  display:block;
-}
-.reveal a{
-  color:#30415d;
-}
+/*
 .main_title:hover,.main_title:focus,.main_title:active{
   -webkit-box-shadow: 1px 3px 25px -4px rgba(0,0,0,0.75);
   -moz-box-shadow: 1px 3px 25px -4px rgba(0,0,0,0.75);
   box-shadow: 1px 3px 25px -4px rgba(0,0,0,0.75);
   transition:all 0.7s;
 }
-.down_arrow{
-    position:absolute;
-    top:92vh;
-    transition:top 0.3s;
-    border-right: 10px solid;
-    border-bottom: 10px solid;
-    width: 35px;
-    height: 35px;
-    transform: rotate(45deg);
-    cursor:pointer;
-    color:#F4DeCb;
-    font-size:100px;
-    font-family:Montserrat;
-    padding:0;
-    margin:0;
-    display:flex;
-    justify-content:center;
-    opacity:1 !important; /*override js effect for main_container in Header component*/
-}
-.down_arrow:hover{
-  transition:top 0.3s;
-  top:94vh;
-}
+*/
+
 .projects .container{
   min-width:100%;
   margin:0;
@@ -190,11 +165,13 @@ nav{
   width:100%;
   height:100%;
   padding-bottom:5%;
+  font-family:Roboto;
 }
 .overlay_description{
-  padding:2% 15% 2% 25%;
-  font-size:16px;
-  font-weight:normal;
+  padding:2% 15% 2% 20%;
+  text-align:left;
+  white-space:pre-line;
+  font-size:14px;
 }
 .overlay_info a{
   display:inline-block;
@@ -206,14 +183,22 @@ nav{
   height:40px;
   text-align:center;
   line-height:40px;
-  font-size:16px;
   text-decoration:none;
-
+  color:#F5F5F5;
+}
+.overlay_info a:first-child{
+  margin-right:2%;
+}
+.overlay_info a:last-child{
+  margin-left:2%;
 }
 .overlay_info a:hover{
   transition:all 0.2s;
   background-color:white;
   color:slategrey;
+}
+.overlay_info .private{
+  display:none;
 }
 .overlay_links{
   width:100%;
@@ -283,21 +268,23 @@ nav{
   display:flex;
   justify-content:center;
   align-items:center;
+  height:200px;
+  margin-bottom:2%;
 }
 .footer h2{
   text-align:center;
   text-transform:uppercase;
 }
-.footer h3{
-  font-size:3vw;
-  padding:8% 0 5% 0;
-  width:100%;
+.contact_info h3{
+  font-size:2.5vw;
+  min-width:100%;
   text-align:center;
+  line-height:6vw;
 }
-.footer h3 span{
-  padding:2%;
+.contact_info h3 span{
+  padding:1%;
 }
-.footer h3 span:hover{
+.contact_info h3 span:hover{
   box-shadow: inset 40vw 0 0 0 #18bc9c;
   transition:all 1s;
   color:white;
@@ -307,7 +294,7 @@ nav{
   justify-content:center;
   align-items:center;
   flex-direction:column;
-  padding-bottom:10%;
+  width:100%;
 }
 .contact_info img{
   width:52px;
@@ -315,15 +302,14 @@ nav{
 }
 .contact_info ul{
   display:flex;
-  justify-content:space-around;
+  justify-content:center;
   width:100%;
   list-style-type:none;
-  padding:0 10% 0 15%;
-
+  padding:0 20% 0 25%;
 }
 .contact_info li{
   display:inline-block;
-  width:25%;
+  width:10vw;
 }
 
 /*Scale down header title font*/
@@ -333,14 +319,19 @@ nav{
   }
   .overlay_description{
     padding:2% 5% 2% 10%;
-    font-size:15px;
-    font-weight:normal;
   }
   .site_description{
     font-size:15px;
   }
-  .contact_info ul{
-    padding:0 5% 0 5%;
+  .contact_info h3{
+    font-size:3.2vw;
+  }
+  .contact_info img{
+    height:46px;
+    height:46px;
+  }
+  .contact_info li{
+    width:14vw;
   }
 }
 /* iPad Pro */
@@ -352,7 +343,6 @@ nav{
   .nav_links span{
     font-size:1em;
   }
-
   .single{
     width: calc(100% * (1/2));
     display:inline-block;
@@ -369,25 +359,18 @@ nav{
   .about li h3{
     font-size:2.5vw;
   }
-  .footer h3{
-    font-size:3.1vw;
-  }
-  .contact_info ul{
-    padding:0 5% 0 5%;
-  }
-
   .main_title h1{
     font-size:70px;
   }
-
+  .contact_info h3{
+    font-size:3.6vw;
+  }
 }
-
 @media only screen and (max-width:820px){
   .main_title h1{
     font-size:65px;
   }
 }
-
 /* iPad */
 @media only screen and (max-width:768px){
   .nav_title{
@@ -407,9 +390,7 @@ nav{
     width:100%;
   }
   .overlay_description{
-    padding:2% 15% 2% 25%;
-    font-size:15px;
-    font-weight:normal;
+    padding:2% 15% 2% 20%;
   }
   .nav_container{
     display:flex;
@@ -424,7 +405,6 @@ nav{
     text-align:left;
     width:80%;
     padding:0px;
-
   }
   .mobile_menu{
     display:inline-block;
@@ -438,7 +418,7 @@ nav{
     width:100%;
     text-align:center;
     border-top:1px solid white;
-    background-color:#2C3E50;
+    background-color:#30415D;
   }
   .nav_mobile span{
     display:none;
@@ -448,9 +428,8 @@ nav{
     line-height:40px;
   }
   .nav_mobile span:hover{
-    background-color:#a9a5a4;
+    background-color:#35C4A8;
   }
-
   .nav_mobile span a{
     color:white;
     font-size:1.1em;
@@ -461,31 +440,37 @@ nav{
   .site_description{
     font-size:0.95em;
   }
-  .contact_info img{
-    width:40px;
-    height:40px;
+  .footer .container{
+    height:150px;
   }
-  .contact_info ul{
-    padding:0 5% 0 5%;
-  }
-
-
-}
-
-/* Nexus 5x/6p iPhone 6+ */
-@media only screen and (max-width:480px){
   .contact_info img{
     width:32px;
     height:32px;
   }
   .contact_info ul{
-    padding:0 5% 0 5%;
+    padding:1% 15% 0 20%;
+  }
+  .contact_info li{
+    width:16vw;
+  }
+  .contact_info h3{
+    font-size:4vw;
+  }
+  .contact_info h3 span:hover{
+    box-shadow: inset 65vw 0 0 0 #18bc9c;
+    transition:all 1s;
+    color:white;
   }
 
+}
+/* Nexus 5x/6p iPhone 6+ .contact_info img{
+    width:40px;
+    height:40px;
+  }*/
+@media only screen and (max-width:480px){
+
   .overlay_description{
-    padding:2% 5% 2% 15%;
-    font-size:15px;
-    font-weight:normal;
+    padding:2% 5% 2% 10%;
   }
   .about{
     padding:8%;
@@ -526,7 +511,21 @@ nav{
   .site_description{
     font-size:1em;
   }
-
+  .contact_info h3{
+    font-size:4.5vw;
+  }
+  .contact_info img{
+    width:32px;
+    height:32px;
+  }
+  .contact_info ul{
+    padding:3% 15% 0 20%;
+  }
+  .contact_info h3 span:hover{
+    box-shadow: inset 55vw 0 0 0 #18bc9c;
+    transition:all 1s;
+    color:white;
+  }
 }
 /* iPhone 6 /Medium-sized phones*/
 @media only screen and (max-width:375px){
@@ -558,32 +557,28 @@ nav{
   .nav_title{
     font-size:1em;
   }
-
   .main_title h1{
     font-size:37px;
   }
   .main_title{
     margin-top:25%;
   }
-  .reveal{
-    font-size:15px;
+  .contact_info h3{
+    font-size:4.5vw;
   }
-  .down_arrow{
-    width:25px;
-    height:25px;
-  }
-
-}
-@media only screen and (max-width:360px){
-  .footer h3{
-    font-size:3.8vw;
-  }
-  .footer h3 span:hover{
-    box-shadow: inset 45vw 0 0 0 #18bc9c;
+  .contact_info h3 span:hover{
+    box-shadow: inset 55vw 0 0 0 #18bc9c;
     transition:all 1s;
     color:white;
   }
-
+  .footer .container{
+    height:100px;
+  }
+  .contact_info ul{
+    padding:3% 15% 0 20%;
+  }
+}
+@media only screen and (max-width:360px){
   .main_title h1{
     font-size:30px;
   }
@@ -593,20 +588,7 @@ nav{
   .reveal{
     font-size:13px;
   }
-  .down_arrow{
-    width:25px;
-    height:25px;
-  }
-
   .overlay_description{
-    font-size:14px;
-    padding:2% 5% 2% 15%;
-    margin:0;
+    font-size:13px;
   }
-
-  .overlay_description a{
-    margin:0;
-    padding:0;
-  }
-
 }
