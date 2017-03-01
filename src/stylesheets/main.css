@@ -169,9 +169,9 @@ nav{
 }
 .overlay_description{
   padding:2% 15% 2% 20%;
-  font-size:16px;
-  font-weight:normal;
   text-align:left;
+  white-space:pre-line;
+  font-size:13px;
 }
 .overlay_info a{
   display:inline-block;
@@ -183,7 +183,6 @@ nav{
   height:40px;
   text-align:center;
   line-height:40px;
-  font-size:16px;
   text-decoration:none;
   color:#F5F5F5;
 }
@@ -197,6 +196,9 @@ nav{
   transition:all 0.2s;
   background-color:white;
   color:slategrey;
+}
+.overlay_info .private{
+  display:none;
 }
 .overlay_links{
   width:100%;
