@@ -8,9 +8,6 @@ export default class Home extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            projects:"",
-            about:"",
-            contact:""
         }
     }
     componentDidMount(){
@@ -31,7 +28,8 @@ export default class Home extends React.Component {
         const navLinks = navBar.childNodes[1].childNodes;
         const originalColor = window.getComputedStyle(navBar,null).getPropertyValue("background-color");
         const scrollPos = window.scrollY;
-        homeDom.childNodes.forEach((section,index)=>{
+        for(let index = 0;index<homeDom.childNodes.length;index++){
+            let section = homeDom.childNodes[index];
             if(scrollPos >= section.offsetTop-80 && scrollPos < section.offsetTop + section.getBoundingClientRect().height-80){
                 if(index>0){
                     navLinks[index-1].style.backgroundColor = "#18BC9C";
@@ -52,10 +50,11 @@ export default class Home extends React.Component {
 
                 }
             }
-        });
+        }
     }
 
     handleHover(event){
+        /*
         let main_title = event.target;
         let caption = main_title.childNodes[1];
         if(caption.style == null){
@@ -82,6 +81,7 @@ export default class Home extends React.Component {
             }
             hide();
         }
+        */
     }
 
   render() {

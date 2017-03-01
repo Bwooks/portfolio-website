@@ -15,7 +15,6 @@ export default class Single extends Component{
                     <div className="overlay_info">
                         <h2>{this.props.project.name}</h2>
                         <p className="overlay_description">{this.props.project.description}</p>
-                        <p className="overlay_short_description">{this.props.project.sentence}</p>
                         <div className="overlay_links">
                             <a className="overlay_demo" href={live} target="_blank">Live Demo</a>
                             <a className="overlay_github" href={github} target="_blank">Github</a>

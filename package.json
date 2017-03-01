@@ -9,8 +9,8 @@
     "url": "https://github.com/Bwooks/personal-portfolio"
   },
   "scripts": {
-    "start":"node server.js",
-    "postinstall":"npm run build-prod",
+    "start": "node server.js",
+    "postinstall": "npm run build-prod",
     "dev-server": "webpack-dev-server --inline --hot --history-api-fallback --host localhost --port 8080",
     "build-dev": "webpack --config webpack.dev.config.js",
     "build-prod": "webpack -p --config webpack.prod.config.js",
@@ -26,6 +26,8 @@
   },
   "author": "Brooks Dulla",
   "dependencies": {
+    "express": "latest",
+    "json-loader": "^0.5.4",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
@@ -35,8 +37,7 @@
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
     "redux-form": "^6.4.3",
-    "redux-saga": "^0.14.3",
-    "express": "latest"
+    "redux-saga": "^0.14.3"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",

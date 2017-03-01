@@ -7,6 +7,18 @@
       "live":"https://www.talaprep.com"
     },
     {
+      "name":"Vote Redux",
+      "description":"An application that lets groups of users vote on movies currently in theatres in a tournament-style fashion.",
+      "github":"https://www.github.com/Bwooks/voting-app",
+      "live":"https://reduxvote.herokuapp.com"
+    },
+    {
+      "name":"React Chattr",
+      "description":"A chat application that supports the standard features found in common chat applications, enabling user avatars, names and message timestamps.",
+      "github":"https://www.github.com/Bwooks/chat-prototype",
+      "live":"https://react-chattr.herokuapp.com"
+    },
+    {
       "name":"Dashboard",
       "description":"A user management system that keeps track of user data and supports adding, editing and removing users.",
       "github":"https://www.github.com/Bwooks/user-list-app",
@@ -19,22 +31,10 @@
       "live":"http://codepen.io/_brooksd/full/KgzykZ/"
     },
     {
-      "name":"React Chattr",
-      "description":"A chat application that supports the standard features found in common chat applications, enabling user avatars, names and message timestamps.",
-      "github":"https://www.github.com/Bwooks/chat-prototype",
-      "live":"https://react-chattr.herokuapp.com"
-    },
-    {
       "name":"Pomodoro",
       "description":"A productivity application that helps users track their break and work periods, with adjustable settings for each timer.",
       "github":"http://codepen.io/_brooksd/pen/BQvaWx",
       "live":"http://codepen.io/_brooksd/full/BQvaWx/"
-    },
-    {
-      "name":"Vote Redux",
-      "description":"An application that lets groups of users vote on movies currently in theatres in a tournament-style fashion.",
-      "github":"https://www.github.com/Bwooks/voting-app",
-      "live":"https://reduxvote.herokuapp.com"
     }
   ],
   "skills":{
