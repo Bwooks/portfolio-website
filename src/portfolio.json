@@ -10,7 +10,7 @@
       "live":"https://www.talaprep.com"
     },
     {
-      "name":"Vote Redux",
+      "name":"Redux Movie Brackets",
       "description":[
         "Vote on pairs of movies currently in theatres to decide on a movie to watch.",
         "Technologies: CSS3, HTML5, Javascript, Node.js, React.js, Redux, Socket.io"],

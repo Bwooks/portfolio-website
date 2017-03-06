@@ -19,7 +19,7 @@ export default class Single extends Component{
                         <h2>{this.props.project.name}</h2>
                         <p className="overlay_description">{fullDescription}</p>
                         <div className="overlay_links">
-                            <a className="overlay_demo" href={code} target="_blank">Live Demo</a>
+                            <a className="overlay_demo" href={live} target="_blank">Live Demo</a>
                             <a className={`overlay_code ${typeof code === "undefined" ? "private": "show"}`} href={code} target="_blank">{
                                 /codepen/.test(code) ? "Codepen" : "Github"
                             }
