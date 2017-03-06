@@ -6,7 +6,8 @@ export default class Single extends Component{
     render(){
         const live = this.props.project.live;
         const code = this.props.project.github || this.props.project.codepen;
-        const src = require(`file-loader!../../public/assets/${this.props.project.name}.png`);
+        const fileName = `${this.props.project.name}.png`;
+        const src = require(`file-loader!../../public/assets/${fileName}`);
             const fullDescription = this.props.project.description.reduce((partA,partB)=>{
                 return partA + "\n" + partB;
         });
