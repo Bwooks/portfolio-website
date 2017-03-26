@@ -9,7 +9,7 @@ const Header  = (props)=>{
         <section className="header">
             <div className="container">
                 <div className="main_title" onMouseEnter={props.handleHover} onMouseLeave={props.handleHover}>
-                    <h1><span>Brooks Dulla</span><br/>Frontend Developer <br/>Based in Toronto</h1>
+                    <h1><span>Brooks Dulla</span><br/>Full-Stack Developer <br/>Based in Toronto</h1>
                 </div>
             </div>
         </section>
