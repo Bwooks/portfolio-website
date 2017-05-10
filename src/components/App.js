@@ -1,13 +1,17 @@
 import React from "react";
 import "../stylesheets/main.css";
 import portfolio from "json-loader!../portfolio.json";
+import resume from "file-loader?name=[name].[ext]!../../public/assets/BrooksDulla_resume.pdf";
 import Home from "./Home";
 // app component
 export default class App extends React.Component {
 
     constructor(props){
         super(props);
-        this.state = portfolio;
+        this.state = {
+            portfolio,
+            resume
+        }
     }
 
     effects(type,elem){
@@ -142,7 +146,6 @@ export default class App extends React.Component {
     }
     // render
     render() {
-        const resume = require("file-loader?name=[name].[ext]!../../public/assets/BrooksDulla_resume.pdf");
         return (
             <div className="app_container">
                 <nav className="nav">
@@ -152,7 +155,7 @@ export default class App extends React.Component {
                             <span><a className = "projects_link" onClick={this.smoothScroll.bind(this)}>Projects</a></span>
                             <span><a className= "about_link" onClick={this.smoothScroll.bind(this)}>About Me</a></span>
                             <span><a className= "footer_link" onClick={this.smoothScroll.bind(this)}>Contact</a></span>
-                            <span><a className= "resume_link" href={resume} target="_blank">Resume</a></span>
+                            <span><a className= "resume_link" href={this.state.resume} target="_blank">Resume</a></span>
 
                         </div>
                         <div className="mobile_menu" onClick={this.showMenu.bind(this)}>&#x2261;</div>
@@ -161,10 +164,10 @@ export default class App extends React.Component {
                         <span className = "projects_link" ><a className = "projects_link" >Projects</a></span>
                         <span className = "about_link" ><a className= "about_link">About Me</a></span>
                         <span className = "footer_link" ><a className= "footer_link">Contact</a></span>
-                        <span className = "resume_link" ><a className= "resume_link" href={resume} target="_blank">Resume</a></span>
+                        <span className = "resume_link" ><a className= "resume_link" href={this.state.resume} target="_blank">Resume</a></span>
                     </div>
                 </nav>
-                <Home {...this.state} smoothScroll = {this.smoothScroll.bind(this)}/>
+                <Home {...this.state.portfolio} smoothScroll = {this.smoothScroll.bind(this)}/>
             </div>
         );
     }

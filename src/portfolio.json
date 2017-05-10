@@ -19,6 +19,15 @@
       "live":"https://reduxvote.herokuapp.com"
     },
     {
+      "name":"Twitter Map",
+      "description":[
+        "Map of tweets all over the world",
+        "Technologies: CSS3, Express.js, HTML5, Javascript, Leaftlet.js, Twitter API"],
+      "description1":"A chat application that supports the standard features found in common chat applications, enabling user avatars, names and message timestamps.",
+      "github":"https://www.github.com/Bwooks/twitter-map",
+      "live":"https://tweet-mapper.herokuapp.com"
+    },
+    {
       "name":"React Chattr",
       "description":[
         "Instant messaging application with usernames and timestamps",
@@ -69,5 +78,5 @@
     },
     "icon":"../public/assets"
   },
-  "show":["TalaPrep","Pomodoro","Vote Redux","React Chattr","TicTacToe+","Dashboard"]
+  "show":["TalaPrep","Pomodoro","Vote Redux","React Chattr","TicTacToe+","Dashboard", "Tweet Map"]
 }

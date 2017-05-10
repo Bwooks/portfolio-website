@@ -8,6 +8,7 @@ export default class Main extends Component{
         super(props);
     }
     render(){
+        console.log(this.props.projects);
         return (
                 <Projects show={this.props.show} projects={this.props.projects}/>
         )
